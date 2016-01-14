@@ -1,75 +1,107 @@
-# Set up the prompt
+# Path to your oh-my-zsh installation.
+export ZSH=/home/dm/.oh-my-zsh
 
-#autoload -Uz promptinit
-#promptinit
-#prompt adam1
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="agnoster"
 
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-autoload -U compinit promptinit
-compinit
-promptinit
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-autoload zfinit
-zfinit
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-# This will set the default prompt to the walters theme
-prompt redhat
-function zle-line-init zle-keymap-select {
-    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
-    zle reset-prompt
-}
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-zle -N zle-line-init
-zle -N zle-keymap-select
-export KEYTIMEOUT=1
-export PAGER="less"
-export WORKON_HOME=~/envs
-export PROJECT_HOME=$HOME/Devel
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-alias gs='git status '
-alias gh='git hist'
-alias gl='git log'
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias go='git checkout '
-alias gk='gitk --all&'
-alias gx='gitx --all'
-alias got='git '
-alias get='git '
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
 
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-zstyle ':completion:*' menu select
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
 
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+#plugins=(git node npm bower)
+plugins=(git vi-mode)
 
-setopt histignorealldups sharehistory
-setopt extended_glob
-setopt auto_cd
-setopt menucomplete
-zstyle ':completion:*' menu select=1 _complete _ignored _approximate
+# User configuration
 
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -v
+# export PATH="/home/dm/.gem/ruby/2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+# 
+#
+# Мой конфиг
+#
+#
+
+export PATH=/home/dm/.gem/ruby/2.2.0/bin:$PATH
 bindkey '\e.' insert-last-word
-
-
 alias -s tex=vim
-#alias -s sh=vim
 alias -s {html,org,url}=firefox
 alias -s {pdf,djvu}=zathura
-#alias -s {pdf,}=qpdfview
 alias -s {jpg,jpeg,png,bmp,xpm,gif}=/usr/local/bin/feh_browser.sh
-alias ll='ls -al --color=always'
+#alias ll='ls -al --color=always'
 alias -g TM='tail -f /var/log/messages'
 alias -g T='| tail'
 alias -g TL='| tail -20'
 alias -g L='|less'
 alias -g G='|grep'
+alias gs='git status'
 alias put='luit -encoding "KOI8-R" telnet'
 alias putp='luit -encoding "KOI8-R" telnet 192.168.0.1'
 alias putu='ssh -l systemx'
@@ -82,9 +114,6 @@ joinjpg() {
 convertwin() {
     iconv -f CP1251 -t UTF-8 $1 > $1.tmp
     mv $1.tmp $1
-}
-l() {
-    ls -lt $* | head
 }
 #gft() {
 #    IP="$*"
@@ -139,6 +168,7 @@ use_color=true
 search() {
     ls (#i)**/*$1*
 }
+
 unpack () {
     if [ -f $1 ] ; then
         case $1 in
@@ -197,12 +227,28 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 #zle -N down-line-or-beginning-search
 #[[ -n "${key[Up]}"      ]]  && bindkey   "${key[Up]}"       up-line-or-beginning-search
 #[[ -n "${key[Down]}"    ]]  && bindkey   "${key[Down]}"    down-line-or-beginning-search
+#
+bindkey -M vicmd '?' history-incremental-search-backward
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
 
-autoload up-line-or-beginning-search
-autoload down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search
-bindkey "^[[B" down-line-or-beginning-search
-export PATH=/home/dm/.gem/ruby/2.2.0/bin:$PATH
-source /usr/bin/virtualenvwrapper.sh
+
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+function zle-line-init zle-keymap-select {
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
+
+
+# virtualenvwrapper script
+#source /usr/bin/virtualenvwrapper.sh

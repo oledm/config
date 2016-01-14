@@ -71,7 +71,7 @@ URxvt*color14:                 S_base1
 URxvt*color15:                 S_base3
 !URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=14,xft:FontAwesome=9:antialias=true:hinting=true
 !URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=14,xft:FontAwesome=9:antialias=true:hinting=true
-URxvt*font: xft:InconsolataCyr-12,xft:FontAwesome=9:antialias=true:hinting=true,xft:DejaVu Sans Mono:pixelsize=14:antialias=false
+!URxvt*font: xft:InconsolataCyr-12,xft:FontAwesome=9:antialias=true:hinting=true,xft:DejaVu Sans Mono:pixelsize=14:antialias=false
 !*font: xft:DejaVu Sans Mono:style=Book:antialias=false:size=10
 !urxvt*font: xft:DejaVu Sans Mono:style=Book:antialias=false:size=10,xft:FontAwesome
 XTerm*SaveLines: 9000
@@ -79,7 +79,8 @@ XTerm*SaveLines: 9000
 xterm*borderWidth: 0
 xterm*eightBitInput: false
 !XTerm*faceName: xft:DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true,Font Awesome
-XTerm*faceName: xft:Menlo:autohint=true:pixelsize=14
+XTerm*faceName: xft:Menlo for Powerline:pixelsize=14:antialias=true
+!XTerm*faceName: xft:Menlo:autohint=true:pixelsize=14
 !XTerm*faceName: DejaVu Sans Mono:style=Book:antialias=false
 !xterm*faceSize: 12
 !xterm*scaleHeight: 1.15
@@ -144,6 +145,7 @@ URxvt.keysym.C-Up             : \033[1;5A
 URxvt.keysym.C-Down           : \033[1;5B
 URxvt.keysym.C-Right          : \033[1;5C
 URxvt.keysym.C-Left           : \033[1;5D
+URxvt.keysym.C-Page_Up        : \033[5;5~
 URxvt.keysym.C-Page_Up        : \033[5;5~
 URxvt.keysym.C-Page_Down      : \033[6;5~
 URxvt.keysym.C-Home           : \033[1;5H
