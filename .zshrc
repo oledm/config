@@ -135,6 +135,8 @@ alias putp='luit -encoding "KOI8-R" telnet 192.168.0.1'
 alias putu='ssh -l systemx'
 alias putpu='telnet 192.168.0.1'
 alias vnc='vncviewer -Shared -SendClipboard=0 -AcceptClipboard=0 -SendPrimary=0 -LowColourLevel=0 -AutoSelect=0 -PreferredEncoding="ZRLE"'
+alias please='sudo $(fc -ln -1)'
+
 
 joinjpg() {
     [ -z "$*" ] && echo "Перечислите файлы-картинки для \"склеивания\"" && return
