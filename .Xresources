@@ -80,12 +80,7 @@ xterm*borderWidth: 0
 xterm*eightBitInput: false
 !XTerm*faceName: xft:DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true,Font Awesome
 XTerm*faceName: xft:Menlo for Powerline:pixelsize=14:antialias=true
-!XTerm*faceName: xft:Menlo:autohint=true:pixelsize=14
-!XTerm*faceName: DejaVu Sans Mono:style=Book:antialias=false
-!xterm*faceSize: 12
-!xterm*scaleHeight: 1.15
-!XTerm*faceName: xft:Inconsolata-g for Powerline:antialias=true
-!XTerm*faceName: xft:Ubuntu Mono derivative Powerline-12:antialias=true,Font Awesome
+XTerm**geometry: 110x35
 XTerm*background:              S_base03
 XTerm*foreground:              S_base0
 XTerm*cursorColor:             S_base1
@@ -145,7 +140,6 @@ URxvt.keysym.C-Up             : \033[1;5A
 URxvt.keysym.C-Down           : \033[1;5B
 URxvt.keysym.C-Right          : \033[1;5C
 URxvt.keysym.C-Left           : \033[1;5D
-URxvt.keysym.C-Page_Up        : \033[5;5~
 URxvt.keysym.C-Page_Up        : \033[5;5~
 URxvt.keysym.C-Page_Down      : \033[6;5~
 URxvt.keysym.C-Home           : \033[1;5H

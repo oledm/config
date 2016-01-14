@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/dm/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -116,7 +116,7 @@ setopt extended_glob
 bindkey -v
 export KEYTIMEOUT=1
 export EDITOR="vim"
-export PATH=/home/dm/.gem/ruby/2.2.0/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
 bindkey '\e.' insert-last-word
 
 alias -s tex=vim
