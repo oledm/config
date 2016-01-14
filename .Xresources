@@ -1,0 +1,192 @@
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
+
+
+! Common
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+
+! Dark
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background:            S_base03
+
+URxvt*background:              S_base03
+URxvt*foreground:              S_base0
+!URxvt*fading:                  40
+!URxvt*fadeColor:               S_base03
+URxvt*cursorColor:             S_base1
+URxvt*pointerColorBackground:  S_base01
+URxvt*pointerColorForeground:  S_base1
+
+URxvt*color0:                  S_base02
+URxvt*color1:                  S_red
+URxvt*color2:                  S_green
+URxvt*color3:                  S_yellow
+URxvt*color4:                  S_blue
+URxvt*color5:                  S_magenta
+URxvt*color6:                  S_cyan
+URxvt*color7:                  S_base2
+URxvt*color8:                  S_base03
+URxvt*color9:                  S_orange
+URxvt*color10:                 S_base01
+URxvt*color11:                 S_base00
+URxvt*color12:                 S_base0
+URxvt*color13:                 S_violet
+URxvt*color14:                 S_base1
+URxvt*color15:                 S_base3
+!URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=14,xft:FontAwesome=9:antialias=true:hinting=true
+!URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=14,xft:FontAwesome=9:antialias=true:hinting=true
+URxvt*font: xft:InconsolataCyr-12,xft:FontAwesome=9:antialias=true:hinting=true,xft:DejaVu Sans Mono:pixelsize=14:antialias=false
+!*font: xft:DejaVu Sans Mono:style=Book:antialias=false:size=10
+!urxvt*font: xft:DejaVu Sans Mono:style=Book:antialias=false:size=10,xft:FontAwesome
+XTerm*SaveLines: 9000
+!XTerm*selectToClipboard: true
+xterm*borderWidth: 0
+xterm*eightBitInput: false
+!XTerm*faceName: xft:DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true,Font Awesome
+XTerm*faceName: xft:Menlo:autohint=true:pixelsize=14
+!XTerm*faceName: DejaVu Sans Mono:style=Book:antialias=false
+!xterm*faceSize: 12
+!xterm*scaleHeight: 1.15
+!XTerm*faceName: xft:Inconsolata-g for Powerline:antialias=true
+!XTerm*faceName: xft:Ubuntu Mono derivative Powerline-12:antialias=true,Font Awesome
+XTerm*background:              S_base03
+XTerm*foreground:              S_base0
+XTerm*cursorColor:             S_base1
+XTerm*pointerColorBackground:  S_base01
+XTerm*pointerColorForeground:  S_base1
+XTerm*color0:                  S_base02
+XTerm*color1:                  S_red
+XTerm*color2:                  S_green
+XTerm*color3:                  S_yellow
+XTerm*color4:                  S_blue
+XTerm*color5:                  S_magenta
+XTerm*color6:                  S_cyan
+XTerm*color7:                  S_base2
+XTerm*color8:                  S_base03
+XTerm*color9:                  S_orange
+XTerm*color10:                 S_base01
+XTerm*color11:                 S_base00
+XTerm*color12:                 S_base0
+XTerm*color13:                 S_violet
+XTerm*color14:                 S_base1
+XTerm*color15:                 S_base3
+
+
+
+
+
+
+URxvt*blr: 5
+urxvt.letterSpace: -1
+URxvt.dynamicColors:      false
+URxvt.scrollBar: false
+URxvt*iso14755: False
+Xft.antialias: 1
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+!Xft.rgba: rgb
+!URxvt.keysym.Up              : \033[A  !breaks arrow keys in Vim
+!URxvt.keysym.Down            : \033[B  !breaks arrow keys in Vim
+!URxvt.keysym.Right           : \033[C  !breaks arrow keys in Vim
+!URxvt.keysym.Left            : \033[D  !breaks arrow keys in Vim
+!URxvt.keysym.Page_Up         : \033[5~ !breaks scrolling in Rxvt
+!URxvt.keysym.Page_Down       : \033[6~ !breaks scrolling in Rxvt
+!URxvt.keysym.Home            : \033[H  !breaks navigation in Vim
+!URxvt.keysym.End             : \033[F  !breaks navigation in Vim
+URxvt.keysym.S-Up             : \033[1;2A
+URxvt.keysym.S-Down           : \033[1;2B
+URxvt.keysym.S-Right          : \033[1;2C
+URxvt.keysym.S-Left           : \033[1;2D
+!URxvt.keysym.S-Page_Up       : captured by terminal for scrolling
+!URxvt.keysym.S-Page_Down     : captured by terminal for scrolling
+URxvt.keysym.S-Home           : \033[1;2H
+URxvt.keysym.S-End            : \033[1;2F
+URxvt.keysym.C-Up             : \033[1;5A
+URxvt.keysym.C-Down           : \033[1;5B
+URxvt.keysym.C-Right          : \033[1;5C
+URxvt.keysym.C-Left           : \033[1;5D
+URxvt.keysym.C-Page_Up        : \033[5;5~
+URxvt.keysym.C-Page_Down      : \033[6;5~
+URxvt.keysym.C-Home           : \033[1;5H
+!URxvt.keysym.C-End            : \033[1;5F
+!URxvt.keysym.C-S-Up           : \033[1;6A
+!URxvt.keysym.C-S-Down         : \033[1;6B
+!URxvt.keysym.C-S-Right        : \033[1;6C
+!URxvt.keysym.C-S-Left         : \033[1;6D
+!URxvt.keysym.C-S-Page_Up     : seen as Rxvt.keysym.S-Page_Up
+!URxvt.keysym.C-S-Page_Down   : seen as Rxvt.keysym.S-Page_Down
+XTerm*keysym.C-S-Home         : \033[1;6H
+XTerm*keysym.C-S-End          : \033[1;6F
+XTerm*keysym.M-Up             : \033[1;3A
+XTerm*keysym.M-Down           : \033[1;3B
+XTerm*keysym.M-Right          : \033[1;3C
+XTerm*keysym.M-Left           : \033[1;3D
+XTerm*keysym.M-Page_Up        : \033[5;3~
+XTerm*keysym.M-Page_Down      : \033[6;3~
+XTerm*keysym.M-Home           : \033[1;3H
+XTerm*keysym.M-End            : \033[1;3F
+XTerm*keysym.M-S-Up           : \033[1;4A
+XTerm*keysym.M-S-Down         : \033[1;4B
+XTerm*keysym.M-S-Right        : \033[1;4C
+XTerm*keysym.M-S-Left         : \033[1;4D
+!XTerm.keysym.M-S-Page_Up     : seen as Rxvt.keysym.S-Page_Up
+!XTerm.keysym.M-S-Page_Down   : seen as Rxvt.keysym.S-Page_Down
+XTerm.keysym.M-S-Home         : \033[1;4H
+XTerm.keysym.M-S-End          : \033[1;4F
+XTerm.keysym.M-C-Up           : \033[1;7A
+XTerm.keysym.M-C-Down         : \033[1;7B
+XTerm.keysym.M-C-Right        : \033[1;7C
+XTerm.keysym.M-C-Left         : \033[1;7D
+XTerm.keysym.M-C-Page_Up      : \033[5;7~
+XTerm.keysym.M-C-Page_Down    : \033[6;7~
+XTerm.keysym.M-C-Home         : \033[1;7H
+XTerm.keysym.M-C-End          : \033[1;7F
+XTerm.keysym.M-C-S-Up         : \033[1;8A
+XTerm.keysym.M-C-S-Down       : \033[1;8B
+XTerm.keysym.M-C-S-Right      : \033[1;8C
+XTerm.keysym.M-C-S-Left       : \033[1;8D
+!XTerm.keysym.M-C-S-Page_Up   : seen as Rxvt.keysym.S-Page_Up
+!XTerm.keysym.M-C-S-Page_Down : seen as Rxvt.keysym.S-Page_Down
+XTerm.keysym.M-C-S-Home       : \033[1;8H
+XTerm.keysym.M-C-S-End        : \033[1;8F
+XTerm.keysym.F4        : xterm &
+Xcursor.theme: Adwaita
