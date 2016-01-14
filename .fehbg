@@ -1,0 +1,2 @@
+#!/bin/sh
+feh  --image-bg black --bg-center '/home/dm/Изображения/Обои/Wallpapers of week/photo-1444090542259-0af8fa96557e_small.jpg' 
