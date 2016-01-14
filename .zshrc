@@ -88,6 +88,23 @@ source $ZSH/oh-my-zsh.sh
 # Мой конфиг
 #
 #
+function get_RAM {
+  free -m | awk '{if (NR==3) print $4}' | xargs -i echo 'scale=1;{}/1000' | bc
+}
+
+function get_nr_jobs() {
+  jobs | wc -l
+}
+
+function get_nr_CPUs() {
+  grep -c "^processor" /proc/cpuinfo
+}
+
+function get_load() {
+  uptime | awk '{print $11}' | tr ',' ' '
+}
+
+RPROMPT='%{$fg_bold[red]%}[$(get_nr_jobs), $(get_RAM)G, $(get_load)($(get_nr_CPUs))] %{$fg_bold[green]%}%*%{$reset_color%}'
 
 HISTSIZE=9000
 SAVEHIST=9000
