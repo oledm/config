@@ -1,0 +1,273 @@
+" ~/.vimperatorrc | vi: set ft=vimperator: | Curtis Free (http://curtisfree.com)
+
+" These settings prevent Vimperator from overwriting my preferred Firefox settings.
+"set! browser.startup.page=1
+
+" Miscellaneous
+set history=50
+colorscheme solarized_dark
+"" vertical bar CANNOT be used here
+set urlseparator=;
+
+"Don't go into insert mode when loading a page
+"set focuscontent
+
+"default search/suggest engine: google
+set defsearch=google
+set suggestengines=google
+
+" Awesome Bar
+"" See http://developernotes.com/archive/2008/09/22/vimperator-tip-awesome-bar.aspx.
+"" Additional 's' option gives initial suggestion of search engine but (mistakenly?)
+"" enables suggestions (which should only occur given 'S'). Useful, but I'll favor
+"" privacy/security and just use 'l' here.
+set complete=l
+
+" Scrolling
+"" Vimperator does not give the user direct control over scroll distance. Vimium (for
+"" Chromium/Google Chrome) uses a nice 60px by default; 2<dir> is much smaller, but it
+"" feels better in Vimperator.
+nnoremap j 2j
+nnoremap k 2k
+""nnoremap h 2h
+""nnoremap l 2l
+
+" Display
+"" show only the tab bar
+"set gui=tabs
+set gui=none
+"" see http://code.google.com/p/vimperator-labs/issues/detail?id=311
+set popups=tab,resized
+
+" Find
+"" perform incremental searching
+set incsearch
+"" highlight search results
+set hlsearch
+"" typically (see below) ignore case
+set ignorecase
+"" only consider case if an upper case char is used
+set smartcase
+
+" Maps
+"" Note: Since about Vimperator 2.2, one must use S-char (shift+char) instead of CHAR (uppercase).
+""" Stop
+map <Esc> <C-c>
+""" Site Opening
+map  <C-l> :nohlsearch
+imap <C-l> <Esc>o
+map  <C-S-l> t
+imap <C-S-l> <Esc>t
+map  <C-e> O
+imap <C-e> <Esc>O
+""" Navigation
+map < H
+map > L
+""" Searching (Google)
+map  <C-k> ogoogle<Space>
+imap <C-k> <Esc>ogoogle<Space>
+map  <C-S-k> tgoogle<Space>
+imap <C-S-k> <Esc>tgoogle<Space>
+
+"""" Downloads
+noremap  <C-j> <C-t>:downloads<CR>
+inoremap <C-j> <Esc><C-t>:downloads<CR>
+cnoremap <C-j> <C-t>:downloads<CR>
+""" Tabs
+"""" GNU Screen-like Tabs
+""""" NOTE: These interfere with Vimperator's default <C-a> functionality.
+"""""       See `:h <C-a>`.
+" map <C-a>c <C-t>
+" map <C-a>n <C-Tab>
+" map <C-a>p <S-C-Tab>
+" map <C-a>k d
+"""" (Custom) Vim-like Tabs
+"""""" See http://dailyvim.blogspot.com/2008/11/tabs.html.
+"map ,to <C-t>
+"map ,tf t
+"map ,tc d
+"map ,tn <C-Tab>
+"map ,tp <S-C-Tab>
+""" Mode Overrides
+"""" Insert Mode
+imap <C-t> <Esc><C-t>
+imap <C-w> <Esc><C-w>
+"""" Command Mode
+cmap <C-k> <Esc><C-k>
+cmap <C-l> <Esc><C-l>
+cmap <C-t> <Esc><C-t>
+
+
+" Style
+"" See http://bbs.archlinux.org/viewtopic.php?id=69123
+"" See http://github.com/VoQn/vimperator-colorscheme/raw/e13afec1be5ec1c9de775d0e2a464862f8d3a453/colors/default.vimp
+hi CompItem  font-size: 12px;
+hi CompTitle color: magenta; font-weight: bold; font-size: 12px;
+
+" Commands
+"" Show Error Console
+""" NOTE: Requires Web Developer toolbar.
+command! error js webdeveloper_openErrorConsole();
+"" Show User Agent
+command! useragent set! general.useragent.extra.firefox?
+"" Show Web Developer Toolbar
+""" NOTE: Requires Web Developer toolbar.
+command! webdev js webdeveloper_toggleToolbar();
+"" Open Localhost
+command! localhost open http://localhost
+"" Open Jekyll WEBrick
+command! jekyll open http://0.0.0.0:4000
+"" App Tabs
+command! app set apptab!
+
+" JavaScript
+"" Window
+:js var win = window.content.wrappedJSObject;
+"" Element Toggle
+""" See http://vimperator.org/trac/ticket/2.
+:js <<EOJS
+toggle_element = function(name) {
+document.getElementById(name).collapsed ^= 1;
+}
+EOJS
+"" Bookmark on Delicious
+""" JS derived from http://delicious.com/help/bookmarklets.
+""" For reference, see https://developer.mozilla.org/en/XUL/browser.
+map D :js add_to_delicious()<CR>
+:js <<EOJS
+add_to_delicious = function() {
+var delicious_url = 'https://delicious.com/save'
++ '?url=' + encodeURIComponent(win.document.location)
++ '&title=' + encodeURIComponent(win.document.title)
++ '&v=5&noui=1&jump=doclose'
++ '&share=no'; // default share setting
+window.open(delicious_url, 'deliciousuiv5', 'width=550,height=550');
+}
+EOJS
+"" Amazon Universal Wishlist
+""" JS derived from http://www.amazon.com/wishlist/get-button (also see Delicious credits above).
+"""" NOTE: If not already logged into Amazon.com, this will not always work ('&' isn't handled
+""""       by Amazon when passing through login).
+command! amzwishlist js add_to_amazon_wishlist();
+:js <<EOJS
+add_to_amazon_wishlist = function() {
+var display = function() {
+auwl = win['AUWLBook']
+if (auwl) {
+auwl.showPopover();
+} else {
+setTimeout(display, 200);
+}
+};
+var script = win.document.createElement('script');
+script['src'] = 'https://www.amazon.com/wishlist/add.js'
++ '?loc=' + encodeURIComponent(window.location);
+win.document.body.appendChild(script);
+display();
+}
+EOJS
+" Disable status bar
+map <silent> <C-F8> :js toggle_bottombar()<CR>
+
+:js << EOF
+function toggle_bottombar() {
+  var bb = document.getElementById('liberator-bottombar');
+  if (!bb)
+    return;
+  bb.style.height = (bb.style.height == '') ? '0px' : '';
+  bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
+}
+EOF
+
+" Мои настройки
+" set hintchars=0123456789abcdefghijklmnopqrstuvwxyz
+set hintchars=1234qwerasdfzxcv
+map <Right> :bn<CR>
+map <Left> :bp<CR>
+""map <C-j> :bn<CR>
+""map <C-h> :bp<CR>
+nnoremap h :bp<CR>
+nnoremap l :bn<CR>
+map <S-Right> :tabmove +1<CR>
+map <S-Left> :tabmove -1<CR> 
+map \" :b#<CR>
+map v :b#<CR>
+" Russian language keyboard mappings (UTF-8)
+
+map ё `
+map й q
+map ц w
+map у e
+map к r
+map е t
+map н y
+map г u
+map ш i
+map щ o
+map з p
+map х [
+map ъ ]
+map ф a
+map ы s
+map в d
+map а f
+map п g
+map р h
+map о j
+map л k
+map д l
+map ж ;
+map э '
+map я z
+map ч x
+map с c
+map м v
+map и b
+map т n
+map ь m
+map б ,
+map ю .
+map Ё ~
+map Й Q
+map Ц W
+map У E
+map К R
+map Е T
+map Н Y
+map Г U
+map Ш I
+map Щ O
+map З P
+map Х {
+map Ъ }
+map Ф A
+map Ы S
+map В D
+map А F
+map П G
+map Р H
+map О J
+map Л K
+map Д L
+map Ж :
+map Э "
+map Я Z
+map Ч X
+map С C
+map М V
+map И B
+map Т N
+map Ь M
+map Б <
+map Ю >
+imap <C-a> <C-v><C-a>
+map <C-a> <C-v><C-a>
+map <C-Up> gg
+map <C-Down> G
+map , g0
+map . g$
+map Q :qmarks<CR>
+noremap <C-c> <C-v><C-c>
+noremap <C-v> <C-v><C-v>
+noremap <C-p> <C-v><C-p>
+"noremap <C-a> <C-v><C-a>
