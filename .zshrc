@@ -50,8 +50,9 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git node npm bower)
-plugins=(git history-substring-search)
 
+plugins=(git history-substring-search zsh-syntax-highlighting)
+#source ~/.oh-my-zsh/custom/plugins/git-prompt/git_prompt.zsh
 # User configuration
 
 # export PATH="/home/dm/.gem/ruby/2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
@@ -104,7 +105,15 @@ function get_load() {
   uptime | awk '{print $11}' | tr ',' ' '
 }
 
-RPROMPT='%{$fg_bold[red]%}[$(get_nr_jobs), $(get_RAM)G, $(get_load)($(get_nr_CPUs))] %{$fg_bold[green]%}%*%{$reset_color%}'
+_git_repo_name() { 
+    echo git:`git remote show origin -n | grep URL | grep -Eo '(\w+.git$)' | cut -d'.' -f1 | head -n 1`
+}
+_heavy_proc() {
+    echo `ps aux | sort -rnk 3,3 | head -n 1 | grep -Eo '(\w+)$'`
+}
+
+#RPROMPT=' %{$fg[green]%}$(_heavy_proc)%{$reset_color%} %{$fg_bold[red]%}[$(get_RAM)G, $(get_load)]%{$fg_bold[green]%}%*%{$reset_color%}'
+RPROMPT=' %{$fg_bold[red]%}[$(get_RAM)G, $(get_load)]%{$fg_bold[green]%}%*%{$reset_color%}'
 
 HISTSIZE=9000
 SAVEHIST=9000
@@ -121,7 +130,7 @@ bindkey '\e.' insert-last-word
 
 alias -s tex=vim
 alias -s {html,org,url}=firefox
-alias -s {pdf,djvu}=zathura
+alias -s {pdf,djvu}=chromium
 alias -s {jpg,jpeg,png,bmp,xpm,gif}=/usr/local/bin/feh_browser.sh
 #alias ll='ls -al --color=always'
 alias -g TM='tail -f /var/log/messages'
