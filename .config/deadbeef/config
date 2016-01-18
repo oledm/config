@@ -22,7 +22,7 @@ gtkui.override_bar_colors 0
 gtkui.override_listview_colors 1
 gtkui.override_tabstrip_colors 1
 gtkui.statusbar.visible 0
-gtkui.tabscroll 1627
+gtkui.tabscroll 0
 gtkui.titlebar_playing %a - %t - DeaDBeeF
 gtkui.titlebar_stopped DeaDBeeF
 gui_plugin GTK2
@@ -83,16 +83,16 @@ mp3.write_id3v2 1
 network.http_user_agent deadbeef
 network.proxy.port 8080
 network.proxy.type HTTP
-playback.loop 2
+playback.loop 0
 playback.order 0
-playback.volume -18.57142
+playback.volume -6.714284
 playlist.column.00 "Название" "%t" -1 611 0
 playlist.column.01 "Исполнитель" "%a" -1 261 0
 playlist.column.02 "Папка" "%d" -1 376 0
 playlist.column.03 "Воспроизводится" "" 1 135 0
 playlist.column.04 "№" "%n" -1 72 1
 playlist.column.05 "Продолжительность" "%l" -1 170 0
-playlist.current 17
+playlist.current 9
 playlist.cursor.0 57
 playlist.cursor.1 12
 playlist.cursor.10 13
