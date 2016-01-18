@@ -128,17 +128,15 @@ export EDITOR="vim"
 export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
 bindkey '\e.' insert-last-word
 
-alias -s tex=vim
-alias -s {html,org,url}=firefox
-alias -s {pdf,djvu}=chromium
-alias -s {jpg,jpeg,png,bmp,xpm,gif}=/usr/local/bin/feh_browser.sh
-#alias ll='ls -al --color=always'
-alias -g TM='tail -f /var/log/messages'
+alias -s {tex,txt,log,TEX,TXT,LOG}=vim
+alias -s {html,HTML,org,url}=firefox
+alias -s {pdf,PDF,djvu,DJVU}=chromium
+alias -s {jpg,jpeg,png,bmp,xpm,gif,JPG,JPEG,PNG,BMP,XPM,GIF}=/usr/local/bin/feh_browser.sh
+alias -g TF='tail -f '
 alias -g T='| tail'
 alias -g TL='| tail -20'
 alias -g L='|less'
 alias -g G='|grep'
-alias gs='git status'
 alias put='luit -encoding "KOI8-R" telnet'
 alias putp='luit -encoding "KOI8-R" telnet 192.168.0.1'
 alias putu='ssh -l systemx'
