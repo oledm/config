@@ -89,31 +89,31 @@ source $ZSH/oh-my-zsh.sh
 # Мой конфиг
 #
 #
-function get_RAM {
-  free -m | awk '{if (NR==3) print $4}' | xargs -i echo 'scale=1;{}/1000' | bc
-}
-
-function get_nr_jobs() {
-  jobs | wc -l
-}
-
-function get_nr_CPUs() {
-  grep -c "^processor" /proc/cpuinfo
-}
-
-function get_load() {
-  uptime | awk '{print $11}' | tr ',' ' '
-}
-
-_git_repo_name() { 
-    echo git:`git remote show origin -n | grep URL | grep -Eo '(\w+.git$)' | cut -d'.' -f1 | head -n 1`
-}
-_heavy_proc() {
-    echo `ps aux | sort -rnk 3,3 | head -n 1 | grep -Eo '(\w+)$'`
-}
-
+#function get_RAM {
+#  free -m | awk '{if (NR==3) print $4}' | xargs -i echo 'scale=1;{}/1000' | bc
+#}
+#
+#function get_nr_jobs() {
+#  jobs | wc -l
+#}
+#
+#function get_nr_CPUs() {
+#  grep -c "^processor" /proc/cpuinfo
+#}
+#
+#function get_load() {
+#  uptime | awk '{print $11}' | tr ',' ' '
+#}
+#
+#_git_repo_name() { 
+#    echo git:`git remote show origin -n | grep URL | grep -Eo '(\w+.git$)' | cut -d'.' -f1 | head -n 1`
+#}
+#_heavy_proc() {
+#    echo `ps aux | sort -rnk 3,3 | head -n 1 | grep -Eo '(\w+)$'`
+#}
+#
 #RPROMPT=' %{$fg[green]%}$(_heavy_proc)%{$reset_color%} %{$fg_bold[red]%}[$(get_RAM)G, $(get_load)]%{$fg_bold[green]%}%*%{$reset_color%}'
-RPROMPT=' %{$fg_bold[red]%}[$(get_RAM)G, $(get_load)]%{$fg_bold[green]%}%*%{$reset_color%}'
+#RPROMPT=' %{$fg_bold[red]%}[$(get_RAM)G, $(get_load)]%{$fg_bold[green]%}%*%{$reset_color%}'
 
 HISTSIZE=9000
 SAVEHIST=9000
@@ -288,4 +288,4 @@ unpack () {
 #
 #
 # virtualenvwrapper script
-#source /usr/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
