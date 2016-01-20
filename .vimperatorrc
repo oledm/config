@@ -54,7 +54,7 @@ set smartcase
 """ Stop
 map <Esc> <C-c>
 """ Site Opening
-map  <C-l> :nohlsearch
+map  <C-l> :nohlsearch<CR>
 imap <C-l> <Esc>o
 map  <C-S-l> t
 imap <C-S-l> <Esc>t

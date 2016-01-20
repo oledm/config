@@ -85,18 +85,18 @@ network.proxy.port 8080
 network.proxy.type HTTP
 playback.loop 0
 playback.order 0
-playback.volume -6.714284
+playback.volume -16.42857
 playlist.column.00 "Название" "%t" -1 611 0
 playlist.column.01 "Исполнитель" "%a" -1 261 0
 playlist.column.02 "Папка" "%d" -1 376 0
 playlist.column.03 "Воспроизводится" "" 1 135 0
 playlist.column.04 "№" "%n" -1 72 1
 playlist.column.05 "Продолжительность" "%l" -1 170 0
-playlist.current 9
+playlist.current 17
 playlist.cursor.0 57
 playlist.cursor.1 12
 playlist.cursor.10 13
-playlist.cursor.11 47
+playlist.cursor.11 205
 playlist.cursor.12 0
 playlist.cursor.13 10
 playlist.cursor.14 10
@@ -111,12 +111,12 @@ playlist.cursor.5 247
 playlist.cursor.6 67
 playlist.cursor.7 451
 playlist.cursor.8 147
-playlist.cursor.9 59
+playlist.cursor.9 14
 playlist.group_by %d
 playlist.scroll.0 986
 playlist.scroll.1 214
 playlist.scroll.10 0
-playlist.scroll.11 520
+playlist.scroll.11 4753
 playlist.scroll.12 0
 playlist.scroll.13 0
 playlist.scroll.14 0
@@ -131,7 +131,7 @@ playlist.scroll.5 8634
 playlist.scroll.6 0
 playlist.scroll.7 10425
 playlist.scroll.8 3377
-playlist.scroll.9 726
+playlist.scroll.9 0
 playlist.scroll.cursorfollowplayback 1
 playlist.tab.00000 3an
 playlist.tab.00001 Kola Kid
@@ -158,9 +158,9 @@ prefwin.geometry.y 50
 replaygain_mode 0
 replaygain_scale 1
 resume.paused 1
-resume.playlist 17
-resume.position 17.827981
-resume.track 7
+resume.playlist 9
+resume.position 325.28091
+resume.track 14
 resume_last_session 1
 streamer.8_to_16 1
 trkproperties.geometry.h 400

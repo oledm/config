@@ -144,8 +144,7 @@ alias putpu='telnet 192.168.0.1'
 alias vnc='vncviewer -Shared -SendClipboard=0 -AcceptClipboard=0 -SendPrimary=0 -LowColourLevel=0 -AutoSelect=0 -PreferredEncoding="ZRLE"'
 alias please='sudo $(fc -ln -1)'
 alias gs='git status '
-alias gh='git hist'
-alias gl='git log'
+alias gh='glol'
 
 
 joinjpg() {
