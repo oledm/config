@@ -80,7 +80,7 @@ xterm*borderWidth: 0
 xterm*eightBitInput: false
 !XTerm*faceName: xft:DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true,Font Awesome
 XTerm*faceName: xft:Menlo for Powerline:pixelsize=14:antialias=true
-XTerm**geometry: 110x35
+XTerm**geometry: 100x40
 XTerm*background:              S_base03
 XTerm*foreground:              S_base0
 XTerm*cursorColor:             S_base1
