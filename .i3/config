@@ -102,12 +102,14 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 #exec_always --no-startup-id xrandr --output LVDS-0 --off --output HDMI-0 --primary --mode 1920x1080
-exec_always --no-startup-id xrandr --output LVDS-1 --off --output HDMI-1 --primary --mode 1920x1080
+#exec_always --no-startup-id xrandr --output LVDS-1 --off --output HDMI-1 --primary --mode 1920x1080
+exec_always --no-startup-id xrandr --output eDP1 --off --output HDMI1 --primary --mode 1920x1080
 #exec_always --no-startup-id xrandr --output LVDS-0 --primary --mode 1366x768
 exec --no-startup-id setxkbmap "us,ru" ",winkeys" "grp:caps_toggle,grp_led:scroll"
 exec --no-startup-id xset r rate 250 30
 exec --no-startup-id xset b off
-exec --no-startup-id (sleep 3; sh ~/.fehbg)
+exec --no-startup-id /usr/bin/numlockx on
+exec --no-startup-id (sleep 1; sh ~/.fehbg)
 #exec --no-startup-id compton
 
 # switch to workspace
@@ -139,10 +141,10 @@ workspace_auto_back_and_forth yes
 bindsym $mod+z workspace back_and_forth
 bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
 
-#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse set Master 5%+ unmute
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
-#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse set Master 5%- unmute
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
+bindsym Control+Shift+0x5b exec --no-startup-id amixer -q set Master 5%- unmute
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
+bindsym Control+Shift+0x5d exec --no-startup-id amixer -q set Master 5%+ unmute
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 
 bindsym Mod4+n bar mode toggle
@@ -161,7 +163,7 @@ bindsym Mod4+c            exec --no-startup-id galculator
 bindsym Mod4+d            exec --no-startup-id deadbeef 
 bindsym Mod4+f            exec --no-startup-id feh_browser.sh /home/dm/Изображения/1.\ Наши\ телефоны.png
 bindsym Mod4+p            exec --no-startup-id pgadmin3
-bindsym Mod4+t            exec --no-startup-id pcmanfm
+bindsym Mod4+t            exec --no-startup-id spacefm
 bindsym $mod+Control+c    exec --no-startup-id chromium
 bindsym $mod+Control+d    exec --no-startup-id doublecmd
 bindsym $mod+Control+f    exec --no-startup-id firefox
@@ -268,7 +270,7 @@ bar {
     position bottom
     font pango:PT Sans 11
     status_command $HOME/bin/conky-i3bar
-    tray_output HDMI-1
+    tray_output HDMI1
     colors{
         background #002B36
         statusline #F0A659 

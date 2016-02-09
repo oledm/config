@@ -289,3 +289,5 @@ unpack () {
 #
 # virtualenvwrapper script
 source /usr/bin/virtualenvwrapper.sh
+unsetopt correct_all  
+setopt correct
