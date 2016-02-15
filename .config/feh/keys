@@ -25,7 +25,7 @@ scroll_left  H C-Left
 scroll_right L C-Right
 
 # File deletion
-remove     d   Delete
+remove     x   Delete
 delete   D C-Delete
 
 # remove now conflicts with toggle_filenames, so change that

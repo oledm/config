@@ -163,7 +163,7 @@ bindsym Mod4+c            exec --no-startup-id galculator
 bindsym Mod4+d            exec --no-startup-id deadbeef 
 bindsym Mod4+f            exec --no-startup-id feh_browser.sh /home/dm/Изображения/1.\ Наши\ телефоны.png
 bindsym Mod4+p            exec --no-startup-id pgadmin3
-bindsym Mod4+t            exec --no-startup-id spacefm
+bindsym Mod4+s            exec --no-startup-id spacefm
 bindsym $mod+Control+c    exec --no-startup-id chromium
 bindsym $mod+Control+d    exec --no-startup-id doublecmd
 bindsym $mod+Control+f    exec --no-startup-id firefox
