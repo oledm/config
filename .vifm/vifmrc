@@ -293,6 +293,9 @@ nnoremap <S-f7> :mkdir<space> "<C-x>c"<left>
 nnoremap <f7> :mkdir<space> ""<left>
 nnoremap <f8> :delete<cr>
 nnoremap <f9> :!xterm &<cr>
+nnoremap <f10> :set sort=-mtime<cr>
+nnoremap <f11> :set sort=mtime<cr>
+nnoremap <f12> :set sort=name<cr>
 nnoremap <c-up> H
 nnoremap <c-down> L
 nnoremap J 10j
