@@ -54,10 +54,10 @@ imap <F3> <Esc>:bp <BAR> bd #<CR>
 map <F3> <Esc>:bp <BAR> bd #<CR>
 imap <F4> <Esc>:qall<cr>
 map <F4> <Esc>:qall<cr>
-imap <F5> <Esc>:edit ++enc=koi8−r<CR>
-map <F5> <Esc>:edit ++enc=koi8−r<CR>
-imap <F6> <Esc>:write ++enc=utf-8<CR>
-map <F6> <Esc>:write ++enc=utf-8<CR>
+"imap <F5> <Esc>:edit ++enc=koi8−r<CR>
+"map <F5> <Esc>:edit ++enc=koi8−r<CR>
+"imap <F6> <Esc>:write ++enc=utf-8<CR>
+"map <F6> <Esc>:write ++enc=utf-8<CR>
 map <C-Right> :bn<CR>
 map <C-Left> :bp<CR>
 map <C-Up> gg

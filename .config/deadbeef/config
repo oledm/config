@@ -3,8 +3,8 @@ ape.write_apev2 1
 artwork.filemask *cover*.jpg;*front*.jpg;*folder*.jpg;*cover*.png;*front*.png;*folder*.png
 cli_add_playlist_name Default
 cli_add_to_specific_playlist 1
-deadbeef_version 0.7.0
-filechooser.lastdir file:///home/dm/Data/Diff/%D0%9C%D1%83%D0%B7%D1%8B%D0%BA%D0%B0/8%20bit
+deadbeef_version 0.7.2
+filechooser.lastdir file:///home/dm/Data/Diff/%D0%9C%D1%83%D0%B7%D1%8B%D0%BA%D0%B0/dif
 gtkui.autoresize_columns 1
 gtkui.color.listview_cursor 45983 51085 50389
 gtkui.color.listview_even_row 1799 13878 16962
@@ -18,7 +18,7 @@ gtkui.columns.playlist [{"title":"Название","id":"-1","format":"%title%"
 gtkui.embolden_current_track 1
 gtkui.eq.visible 0
 gtkui.layout tabbed_playlist hideheaders=0 {} 
-gtkui.layout.0.6.2 vbox expand="0 1" fill="1 1" homogeneous=0 {hbox expand="0 1 0" fill="1 1 1" homogeneous=0 {playtb {} seekbar {} volumebar {} } tabbed_playlist hideheaders=0 {} } 
+gtkui.layout.0.6.2 vbox expand="0 1" fill="1 1" homogeneous=0 {hbox expand="0 1 0" fill="1 1 1" homogeneous=0 {playtb {} seekbar {} volumebar {} } tabbed_playlist hideheaders=0 width=1920 {} } 
 gtkui.mmb_delete_playlist 1
 gtkui.name_playlist_from_folder 1
 gtkui.override_bar_colors 0
@@ -92,38 +92,38 @@ network.proxy.port 8080
 network.proxy.type HTTP
 playback.loop 0
 playback.order 0
-playback.volume -6.428571
+playback.volume -19.28571
 playlist.column.00 "Название" "%t" -1 611 0
 playlist.column.01 "Исполнитель" "%a" -1 261 0
 playlist.column.02 "Папка" "%d" -1 376 0
 playlist.column.03 "Воспроизводится" "" 1 135 0
 playlist.column.04 "№" "%n" -1 72 1
 playlist.column.05 "Продолжительность" "%l" -1 170 0
-playlist.current 0
-playlist.cursor.0 57
+playlist.current 10
+playlist.cursor.0 40
 playlist.cursor.1 12
-playlist.cursor.10 12
-playlist.cursor.11 127
+playlist.cursor.10 22
+playlist.cursor.11 135
 playlist.cursor.12 0
-playlist.cursor.13 0
+playlist.cursor.13 8
 playlist.cursor.14 10
 playlist.cursor.15 0
-playlist.cursor.16 11
+playlist.cursor.16 1
 playlist.cursor.17 1
 playlist.cursor.18 0
 playlist.cursor.2 7
 playlist.cursor.3 317
-playlist.cursor.4 3
+playlist.cursor.4 16
 playlist.cursor.5 247
 playlist.cursor.6 67
-playlist.cursor.7 641
-playlist.cursor.8 147
-playlist.cursor.9 32
+playlist.cursor.7 251
+playlist.cursor.8 0
+playlist.cursor.9 18
 playlist.group_by %d
-playlist.scroll.0 986
+playlist.scroll.0 562
 playlist.scroll.1 214
 playlist.scroll.10 0
-playlist.scroll.11 2560
+playlist.scroll.11 3000
 playlist.scroll.12 0
 playlist.scroll.13 0
 playlist.scroll.14 0
@@ -136,8 +136,8 @@ playlist.scroll.3 8820
 playlist.scroll.4 0
 playlist.scroll.5 8634
 playlist.scroll.6 0
-playlist.scroll.7 14803
-playlist.scroll.8 3377
+playlist.scroll.7 5363
+playlist.scroll.8 5890
 playlist.scroll.9 0
 playlist.scroll.cursorfollowplayback 1
 playlist.tab.00000 3an
@@ -164,15 +164,15 @@ prefwin.geometry.x 364
 prefwin.geometry.y 206
 replaygain_mode 0
 replaygain_scale 1
-resume.paused 0
-resume.playlist 7
-resume.position 0.7886624
-resume.track 641
+resume.paused 1
+resume.playlist 10
+resume.position 4.0498791
+resume.track 22
 resume_last_session 1
 streamer.8_to_16 1
 trkproperties.geometry.h 400
 trkproperties.geometry.maximized 0
 trkproperties.geometry.w 400
-trkproperties.geometry.x 878
+trkproperties.geometry.x 898
 trkproperties.geometry.y 338
 wv.write_apev2 1
