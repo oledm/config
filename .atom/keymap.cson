@@ -1,0 +1,25 @@
+'body':
+  'ctrl-h': 'pane:show-previous-item'
+  'ctrl-l': 'pane:show-next-item'
+  'f3': 'core:close'
+  'f2': 'core:save'
+
+'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-j': 'unset!'
+
+'atom-workspace atom-text-editor':
+  'ctrl-l': 'unset!'
+
+'.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
+  'f3': 'unset!'
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  'f4': 'core:close'
+
+'atom-text-editor':
+  'f2': 'unset!'
+
+'atom-text-editor:not([mini])':
+  'tab': 'unset!'
+
+'.platform-win32, .platform-linux':
+  'tab': 'tree-view:toggle-focus'

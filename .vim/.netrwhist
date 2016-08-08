@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/dm/script'
 let g:netrw_dirhist_2='/home/dm/Data/Олейник/Проект/gmp/gmp/static/src/app/authentication'
+let g:netrw_dirhist_3='/home/dm/Data/Олейник/Проект/gmp/gmp/reports/utils'
+let g:netrw_dirhist_4='/home/dm/Data/Олейник/Проект/gmp/gmp/static/app/components'
+let g:netrw_dirhist_5='/home/dm/Data/Олейник/Проект/gmp/gmp/static/app'
+let g:netrw_dirhist_6='/home/dm/Data/Олейник/Проект/gmp/gmp/static'

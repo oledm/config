@@ -33,6 +33,25 @@ let g:airline_symbols.whitespace = 'Ξ'
 "vnoremap <silent> p p`] 
 "nnoremap <silent> p p`] 
 
+function! ConfirmQuit(writeFile)
+    if (a:writeFile)
+        if (expand('%:t')=="")
+            echo "Can't save a file with no name."
+            return
+        endif
+        :write
+    endif
+
+    if (winnr('$')==1 && tabpagenr('$')==1)
+        if (confirm("Do you really want to quit?", "&Yes\n&No", 2)==1)
+            :quit
+        endif
+    else
+        :quit
+    endif
+endfu
+
+
 set ttimeoutlen=50
 set hidden
 set confirm
@@ -40,20 +59,22 @@ syntax enable
 set background=dark
 colorscheme solarized
 set t_Co=16
-"execute pathogen#infect()
 syn on
 set number
 set noshowmode
 set showcmd
 
+map <Tab> <Esc><C-w>w
 imap <F1> <Esc>:NERDTreeToggle<CR>
 map <F1> <Esc>:NERDTreeToggle<CR>
 imap <F2> <Esc>:w<CR>
 map <F2> <Esc>:w<CR>
 imap <F3> <Esc>:bp <BAR> bd #<CR>
 map <F3> <Esc>:bp <BAR> bd #<CR>
-imap <F4> <Esc>:qall<cr>
-map <F4> <Esc>:qall<cr>
+"imap <F4> <Esc>:qall<cr>
+"map <F4> <Esc>:qall<cr>
+imap <F4> :call ConfirmQuit(0)<CR>
+map <F4> :call ConfirmQuit(1)<CR>
 "imap <F5> <Esc>:edit ++enc=koi8−r<CR>
 "map <F5> <Esc>:edit ++enc=koi8−r<CR>
 "imap <F6> <Esc>:write ++enc=utf-8<CR>
@@ -292,4 +313,3 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <Up> g<Up>
 nnoremap <Down> g<Down>
-

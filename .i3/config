@@ -157,8 +157,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 bindsym Print             exec --no-startup-id xfce4-screenshooter
-bindsym $mod+F1           exec --no-startup-id /home/dm/remoteadmin.py
-bindsym $mod+F2           exec --no-startup-id gsimplecal
+bindsym $mod+F1           exec --no-startup-id gsimplecal
 bindsym Mod4+c            exec --no-startup-id galculator
 bindsym Mod4+d            exec --no-startup-id deadbeef 
 bindsym Mod4+f            exec --no-startup-id feh_browser.sh /home/dm/Изображения/1.\ Наши\ телефоны.png

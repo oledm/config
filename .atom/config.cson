@@ -1,0 +1,24 @@
+"*":
+  core:
+    autoHideMenuBar: true
+    disabledPackages: [
+      "es6-javascript"
+    ]
+    themes: [
+      "solarized-seti-ui"
+      "monokai-shade"
+    ]
+  editor:
+    fontFamily: "Monaco"
+    invisibles: {}
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    tabType: "soft"
+    zoomFontWhenCtrlScrolling: false
+  "language-babel":
+    autoIndentJSX: true
+  "vim-mode":
+    useSmartcaseForSearch: true
+  welcome:
+    showOnStartup: false
