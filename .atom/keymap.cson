@@ -17,9 +17,26 @@
 
 'atom-text-editor':
   'f2': 'unset!'
+  'ctrl-alt-l': 'editor:auto-indent'
 
 'atom-text-editor:not([mini])':
   'tab': 'unset!'
 
 '.platform-win32, .platform-linux':
   'tab': 'tree-view:toggle-focus'
+"atom-workspace":
+  "alt-p": "tab-switcher:next"
+  "alt-p ^alt": "unset!"
+  "alt-o": "tab-switcher:previous"
+  "alt-o ^alt": "unset!"
+
+"ol.tab-switcher-tab-list":
+  "^ctrl": "tab-switcher:select"
+  "^shift": "tab-switcher:select"
+  "ctrl-up": "tab-switcher:previous"
+  "ctrl-down": "tab-switcher:next"
+  "ctrl-escape": "tab-switcher:cancel"
+  "ctrl-n": "tab-switcher:next"
+  "ctrl-p": "tab-switcher:previous"
+  "ctrl-w": "tab-switcher:close"
+  "ctrl-s": "tab-switcher:save"

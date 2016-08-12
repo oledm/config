@@ -1,21 +1,23 @@
 "*":
   core:
-    autoHideMenuBar: true
+    autoHideMenuBar: false
     disabledPackages: [
       "es6-javascript"
     ]
     themes: [
-      "solarized-seti-ui"
-      "monokai-shade"
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
     ]
   editor:
-    fontFamily: "Monaco"
+    fontFamily: "Menlo"
     invisibles: {}
     showInvisibles: true
     softWrap: true
     softWrapAtPreferredLineLength: true
     tabType: "soft"
     zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "5fff7fbf-7995-d75b-de20-3ef82c968e73"
   "language-babel":
     autoIndentJSX: true
   "vim-mode":

@@ -1,3 +1,14 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'editorconfig/editorconfig-vim'
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPBuffer'
@@ -71,10 +82,10 @@ imap <F2> <Esc>:w<CR>
 map <F2> <Esc>:w<CR>
 imap <F3> <Esc>:bp <BAR> bd #<CR>
 map <F3> <Esc>:bp <BAR> bd #<CR>
-"imap <F4> <Esc>:qall<cr>
-"map <F4> <Esc>:qall<cr>
-imap <F4> :call ConfirmQuit(0)<CR>
-map <F4> :call ConfirmQuit(1)<CR>
+imap <F4> <Esc>:qall<cr>
+map <F4> <Esc>:qall<cr>
+"imap <F4> :call ConfirmQuit(0)<CR>
+"map <F4> :call ConfirmQuit(1)<CR>
 "imap <F5> <Esc>:edit ++enc=koi8−r<CR>
 "map <F5> <Esc>:edit ++enc=koi8−r<CR>
 "imap <F6> <Esc>:write ++enc=utf-8<CR>
