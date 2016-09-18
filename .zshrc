@@ -291,3 +291,5 @@ unpack () {
 source /usr/bin/virtualenvwrapper.sh
 unsetopt correct_all  
 setopt correct
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin

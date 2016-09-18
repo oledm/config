@@ -2,22 +2,38 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+"
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'flazz/vim-colorschemes'
+"Plugin 'isRuslan/vim-es6'
+"Plugin 'othree/yajs.vim'
+"Plugin 'othree/javascript-libraries-syntax.vim'
+"Plugin 'pangloss/vim-javascript'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'othree/javascript-libraries-syntax.vim'
+
+
+
 call vundle#end()            " required
 filetype plugin indent on    " required
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+let g:NERDTreeWinSize=40
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git'
+"let g:ctrlp_cmd = 'CtrlPBuffer'
 let delimitMate_expand_cr = 2
 set laststatus=2
 " настройки Vim-Airline
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#tab_nr_type = 1 " tab number"
 "let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:used_javascript_libs = 'underscore,react'
 
 
 
@@ -294,7 +310,7 @@ set smarttab
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
-map Y y$
+"map Y y$
 
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
