@@ -16,6 +16,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'othree/javascript-libraries-syntax.vim'
 "Plugin 'kana/vim-operator-user'
 "Plugin 'haya14busa/vim-operator-flashy'
+Plugin 'tpope/vim-unimpaired'
 
 
 
