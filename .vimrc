@@ -12,8 +12,10 @@ Plugin 'flazz/vim-colorschemes'
 "Plugin 'othree/javascript-libraries-syntax.vim'
 "Plugin 'pangloss/vim-javascript'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'othree/javascript-libraries-syntax.vim'
+"Plugin 'kana/vim-operator-user'
+"Plugin 'haya14busa/vim-operator-flashy'
 
 
 
@@ -26,6 +28,7 @@ set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNO
 let g:NERDTreeWinSize=40
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git'
+let g:ycm_server_python_interpreter='/usr/bin/python2.7'
 "let g:ctrlp_cmd = 'CtrlPBuffer'
 let delimitMate_expand_cr = 2
 set laststatus=2
@@ -91,7 +94,7 @@ set number
 set noshowmode
 set showcmd
 
-map <Tab> <Esc><C-w>w
+"map <Tab> <Esc><C-w>w
 imap <F1> <Esc>:NERDTreeToggle<CR>
 map <F1> <Esc>:NERDTreeToggle<CR>
 imap <F2> <Esc>:w<CR>
@@ -340,3 +343,5 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <Up> g<Up>
 nnoremap <Down> g<Down>
+"map y <Plug>(operator-flashy)
+"nmap Y <Plug>(operator-flashy)$

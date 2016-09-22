@@ -166,6 +166,7 @@ bindsym Mod4+s            exec --no-startup-id spacefm
 bindsym $mod+Control+c    exec --no-startup-id chromium
 bindsym $mod+Control+d    exec --no-startup-id doublecmd
 bindsym $mod+Control+f    exec --no-startup-id firefox
+bindsym $mod+Control+s    exec --no-startup-id skype
 bindsym $mod+Control+t    exec --no-startup-id thunderbird
 bindsym $mod+Control+v    exec --no-startup-id xterm -title  "VIFM ALONE" -e vifm
 bindsym $mod+Control+k    exec --no-startup-id kill `ps ax | awk '/vncviewer/ && !/grep/ {print $1}'`
@@ -237,14 +238,13 @@ for_window [class="Pgadmin3"]  layout tabbed, border none
 
 # Automatically putting clients on specific workspaces
 assign [class="Pcmanfm"]                → $ws2
-assign [class="Doublecmd"]              → $ws2
+assign [class="Spacefm"]              → $ws2
 assign [class="XTerm" title="VIFM"]     → $ws2
 
 assign [class="Firefox"]                → $ws3
-assign [class="Opera"]                  → $ws3
 
 assign [class="Deadbeef"]               → $ws4
-assign [class="MPlayer"]                → $ws4
+assign [class="Skype"]                → $ws4
 
 assign [class="Pgadmin3"]               → $ws5
 
