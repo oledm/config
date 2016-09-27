@@ -17,12 +17,14 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 "Plugin 'kana/vim-operator-user'
 "Plugin 'haya14busa/vim-operator-flashy'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'mileszs/ack.vim'
 
 
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+let g:ackprg = 'ag --nogroup --nocolor --column --smart-case --ignore-dir=node_modules'
 
 
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
