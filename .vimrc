@@ -137,7 +137,8 @@ nnoremap <Leader>p :e#<CR>
 nnoremap <Leader>$ :blast<CR>
 nnoremap <Leader>^ :bfirst<CR>
 nnoremap <Leader>l :setlocal number!<CR>
-nnoremap <Leader>o :set paste!<CR>
+"nnoremap <Leader>o :set paste!<CR>
+nnoremap <Leader>o :CtrlPBuffer<CR>
 nmap <leader>t :enew<cr>
 nmap <leader>bq :bp <BAR> bd #<cr>
 map - ddp
