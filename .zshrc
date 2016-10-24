@@ -145,6 +145,8 @@ alias vnc='vncviewer -Shared -SendClipboard=0 -AcceptClipboard=0 -SendPrimary=0 
 alias please='sudo $(fc -ln -1)'
 alias gs='git status '
 alias gh='glol'
+alias gffs='git flow feature start'
+alias gfff='git flow feature finish'
 
 
 joinjpg() {
@@ -288,6 +290,7 @@ unpack () {
 #
 #
 # virtualenvwrapper script
+export WORKON_HOME=$HOME/.envs
 source /usr/bin/virtualenvwrapper.sh
 unsetopt correct_all  
 setopt correct
