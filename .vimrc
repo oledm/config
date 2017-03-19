@@ -1,3 +1,4 @@
+set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -8,8 +9,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'flazz/vim-colorschemes'
 "Plugin 'isRuslan/vim-es6'
-"Plugin 'othree/yajs.vim'
-"Plugin 'othree/javascript-libraries-syntax.vim'
 "Plugin 'pangloss/vim-javascript'
 Plugin 'sheerun/vim-polyglot'
 "Plugin 'Valloric/YouCompleteMe'
@@ -17,7 +16,14 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 "Plugin 'kana/vim-operator-user'
 "Plugin 'haya14busa/vim-operator-flashy'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'Raimondi/delimitMate'
 Plugin 'mileszs/ack.vim'
+Plugin 'elzr/vim-json'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 
 
@@ -30,7 +36,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column --smart-case --ignore-dir=node_m
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 let g:NERDTreeWinSize=40
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git\|jspm_packages\|bower_components'
 let g:ycm_server_python_interpreter='/usr/bin/python2.7'
 "let g:ctrlp_cmd = 'CtrlPBuffer'
 let delimitMate_expand_cr = 2
@@ -45,22 +51,36 @@ let g:used_javascript_libs = 'underscore,react'
 
 let g:airline_powerline_fonts=1
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+let g:airline_symbols = {}
 endif
+
 " unicode symbols
-let g:airline_left_alt_sep = '»'
-let g:airline_right_alt_sep = '«'
-let g:airline_left_sep = '»' 
-let g:airline_left_sep = '▶' 
-let g:airline_right_sep = '◀' 
-let g:airline_symbols.linenr = '␊' 
-let g:airline_symbols.linenr = '␤' 
-let g:airline_symbols.linenr = '¶' 
-let g:airline_symbols.branch = '⎇' 
-let g:airline_symbols.paste = 'ρ' 
-let g:airline_symbols.paste = 'Þ' 
-let g:airline_symbols.paste = '∥' 
-let g:airline_symbols.whitespace = 'Ξ' 
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = '☰'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = '∄'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 
 "vnoremap <silent> y y`] 
 "vnoremap <silent> p p`] 

@@ -291,7 +291,7 @@ unpack () {
 #
 # virtualenvwrapper script
 export WORKON_HOME=$HOME/.envs
-source /usr/bin/virtualenvwrapper.sh
+#source /usr/bin/virtualenvwrapper.sh
 unsetopt correct_all  
 setopt correct
 export GOPATH=$HOME/go
