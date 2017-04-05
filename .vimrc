@@ -36,7 +36,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column --smart-case --ignore-dir=node_m
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 let g:NERDTreeWinSize=40
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git\|jspm_packages\|bower_components'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git\|jspm_packages\|bower_components\|lib'
 let g:ycm_server_python_interpreter='/usr/bin/python2.7'
 "let g:ctrlp_cmd = 'CtrlPBuffer'
 let delimitMate_expand_cr = 2
@@ -157,7 +157,6 @@ nnoremap <Leader>p :e#<CR>
 nnoremap <Leader>$ :blast<CR>
 nnoremap <Leader>^ :bfirst<CR>
 nnoremap <Leader>l :setlocal number!<CR>
-"nnoremap <Leader>o :set paste!<CR>
 nnoremap <Leader>o :CtrlPBuffer<CR>
 nmap <leader>t :enew<cr>
 nmap <leader>bq :bp <BAR> bd #<cr>
@@ -173,7 +172,6 @@ set incsearch
 ":set ts=4
 ":set expandtab
 ":set shiftwidth=4
-let g:airline_right_sep = '«' 
 ":set linebreak
 ":set dy=lastline
 set autoindent shiftwidth=4
