@@ -147,6 +147,8 @@ alias gs='git status '
 alias gh='glol'
 alias gffs='git flow feature start'
 alias gfff='git flow feature finish'
+alias npm-exec='PATH=$(npm bin):$PATH'
+alias ns='npm start'
 
 
 joinjpg() {
@@ -289,10 +291,13 @@ unpack () {
 #zle -N zle-keymap-select
 #
 #
-# virtualenvwrapper script
-export WORKON_HOME=$HOME/.envs
-#source /usr/bin/virtualenvwrapper.sh
 unsetopt correct_all  
 setopt correct
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+# virtualenvwrapper script
+export WORKON_HOME=$HOME/.envs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+#source /usr/bin/virtualenvwrapper.sh

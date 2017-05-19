@@ -35,7 +35,7 @@
 ! #define S_base00        #839496
 ! #define S_base0         #657b83
 ! #define S_base1         #586e75
-! #define S_base2         #073642
+! #define S_base2         #eee8d5
 ! #define S_base3         #002b36
 
 
@@ -79,7 +79,12 @@ XTerm*SaveLines: 9000
 xterm*borderWidth: 0
 xterm*eightBitInput: false
 !XTerm*faceName: xft:DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true,Font Awesome
-XTerm*faceName: xft:Menlo for Powerline:pixelsize=15:antialias=true
+!XTerm*faceName: xft:Menlo for Powerline:pixelsize=15:antialias=true
+!XTerm*faceName: xft:Droid Sans Mono for Powerline:pixelsize=15:antialias=true
+!XTerm*faceName: xft:DejaVu Sans Mono for Powerline:pixelsize=16:antialias=true
+!XTerm*faceName: xft:Meslo LG M for Powerline:style=RegularForPowerline:pixelsize=15:antialias=true
+!XTerm*faceName: xft:Meslo LG S for Powerline:style=RegularForPowerline:pixelsize=15:antialias=true
+XTerm*faceName: xft:Meslo LG S for Powerline:style=Regular:pixelsize=15:antialias=true,xft:FontAwesome=9:antialias=true:hinting=true
 XTerm**geometry: 100x40
 XTerm*background:              S_base03
 XTerm*foreground:              S_base0
