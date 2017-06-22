@@ -127,6 +127,7 @@ export KEYTIMEOUT=1
 export EDITOR="vim"
 export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
 bindkey '\e.' insert-last-word
+bindkey "^R" history-incremental-search-backward
 
 alias -s {tex,txt,log,TEX,TXT,LOG}=vim
 alias -s {html,HTML,org,url}=firefox
