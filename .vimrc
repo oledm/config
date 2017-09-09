@@ -8,13 +8,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'flazz/vim-colorschemes'
-"Plugin 'isRuslan/vim-es6'
-"Plugin 'pangloss/vim-javascript'
 Plugin 'sheerun/vim-polyglot'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'othree/javascript-libraries-syntax.vim'
-"Plugin 'kana/vim-operator-user'
-"Plugin 'haya14busa/vim-operator-flashy'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mileszs/ack.vim'
@@ -28,16 +24,40 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-classpath'
 Plugin 'guns/vim-clojure-static'
 Plugin 'vim-scripts/paredit.vim'
-
-
+Plugin 'luochen1990/rainbow'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 let g:ackprg = 'ag --nogroup --nocolor --column --smart-case --ignore-dir=node_modules'
 
-
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
+let g:rainbow_active = 0
+let g:rainbow_operators = 1
+	let g:rainbow_conf = {
+	\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+	\	'ctermfgs': ['brown', 'Darkblue', 'darkgray', 'darkgreen', 'darkcyan', 'darkred', 'darkmagenta', 'brown', 'gray', 'black', 'darkmagenta', 'Darkblue', 'darkgreen', 'darkcyan', 'darkred', 'red'],
+	\	'operators': '_,_',
+	\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+	\	'separately': {
+	\		'*': {},
+	\		'tex': {
+	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+	\		},
+	\		'lisp': {
+	\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+	\		},
+	\		'vim': {
+	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+	\		},
+	\		'html': {
+	\			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+	\		},
+	\		'css': 0,
+	\	}
+	\}
+
 let g:NERDTreeWinSize=40
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git\|jspm_packages\|bower_components\|lib'
@@ -130,12 +150,6 @@ imap <F3> <Esc>:bp <BAR> bd #<CR>
 map <F3> <Esc>:bp <BAR> bd #<CR>
 imap <F4> <Esc>:qall<cr>
 map <F4> <Esc>:qall<cr>
-"imap <F4> :call ConfirmQuit(0)<CR>
-"map <F4> :call ConfirmQuit(1)<CR>
-"imap <F5> <Esc>:edit ++enc=koi8−r<CR>
-"map <F5> <Esc>:edit ++enc=koi8−r<CR>
-"imap <F6> <Esc>:write ++enc=utf-8<CR>
-"map <F6> <Esc>:write ++enc=utf-8<CR>
 map <C-Right> :bn<CR>
 map <C-Left> :bp<CR>
 map <C-Up> gg
@@ -144,6 +158,7 @@ map <CR> G
 map <BS> gg
 nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
+nnoremap <C-c><C-x> :Require!<CR>
 map <Space> <Leader>
 map <Leader>c :s/^/\/\//<CR>:nohlsearch<CR>
 map <Leader>x :s/^\/\///<CR>:nohlsearch<CR>

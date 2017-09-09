@@ -148,6 +148,7 @@ alias gs='git status '
 alias gh='glol'
 alias gffs='git flow feature start'
 alias gfff='git flow feature finish'
+alias gffp='git flow feature publish'
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias ns='npm start'
 
