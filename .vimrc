@@ -29,7 +29,7 @@ Plugin 'luochen1990/rainbow'
 call vundle#end()            " required
 filetype plugin indent on    " required
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-let g:ackprg = 'ag --nogroup --nocolor --column --smart-case --ignore-dir=node_modules'
+let g:ackprg = 'ag --nogroup --nocolor --column --smart-case --ignore-dir=node_modules --ignore-dir=lib --ignore-dir=dist'
 
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
