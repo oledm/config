@@ -3,7 +3,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-"
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
@@ -25,9 +25,17 @@ Plugin 'tpope/vim-classpath'
 Plugin 'guns/vim-clojure-static'
 Plugin 'vim-scripts/paredit.vim'
 Plugin 'luochen1990/rainbow'
+Plugin 'lifepillar/vim-solarized8'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()            " required
+
 filetype plugin indent on    " required
+
+set background=dark
+colorscheme solarized8_dark
+"colorscheme gruvbox
+"let g:gruvbox_contrast_dark='medium'
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 let g:ackprg = 'ag --nogroup --nocolor --column --smart-case --ignore-dir=node_modules'
 
@@ -133,9 +141,6 @@ set ttimeoutlen=50
 set hidden
 set confirm
 syntax enable
-set background=dark
-colorscheme solarized
-set t_Co=16
 syn on
 set number
 set noshowmode

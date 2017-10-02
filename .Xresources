@@ -108,23 +108,17 @@ XTerm*color12:                 S_base0
 XTerm*color13:                 S_violet
 XTerm*color14:                 S_base1
 XTerm*color15:                 S_base3
-
-
-
-
-
-
 URxvt*blr: 5
 urxvt.letterSpace: -1
 URxvt.dynamicColors:      false
 URxvt.scrollBar: false
 URxvt*iso14755: False
-Xft.antialias: 1
-Xft.autohint: 0
-Xft.dpi: 96
-Xft.hinting: 1
-Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
+!Xft.antialias: 1
+!Xft.autohint: 0
+!Xft.dpi: 96
+!Xft.hinting: 1
+!Xft.hintstyle: hintfull
+!Xft.lcdfilter: lcddefault
 !Xft.rgba: rgb
 !URxvt.keysym.Up              : \033[A  !breaks arrow keys in Vim
 !URxvt.keysym.Down            : \033[B  !breaks arrow keys in Vim
@@ -192,3 +186,11 @@ XTerm.keysym.M-C-S-Home       : \033[1;8H
 XTerm.keysym.M-C-S-End        : \033[1;8F
 XTerm.keysym.F4        : xterm &
 Xcursor.theme: Adwaita
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault

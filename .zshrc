@@ -124,7 +124,10 @@ setopt extended_glob
 
 bindkey -v
 export KEYTIMEOUT=1
-export EDITOR="vim"
+alias vim="nvim"
+alias vi="nvim"
+alias vimdiff='nvim -d'
+export EDITOR="nvim"
 export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
 bindkey '\e.' insert-last-word
 bindkey "^R" history-incremental-search-backward
@@ -239,60 +242,6 @@ unpack () {
     fi
 }
 
-## Use modern completion system
-#autoload -Uz compinit
-#compinit
-#
-#zstyle ':completion:*' auto-description 'specify: %d'
-#zstyle ':completion:*' completer _expand _complete _correct _approximate
-#zstyle ':completion:*' format 'Completing %d'
-#zstyle ':completion:*' group-name ''
-##zstyle ':completion:*' menu select=2
-#eval "$(dircolors -b)"
-#zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-#zstyle ':completion:*' list-colors ''
-#zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-#zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-##zstyle ':completion:*' menu select=long
-#zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-#zstyle ':completion:*' use-compctl false
-#zstyle ':completion:*' verbose true
-#
-#bindkey -v '^[[A' up-line-or-search
-#bindkey -v '^[[B' down-line-or-search
-#[[ -n "${key[Up]}"      ]] && bindkey  "${key[Up]}"      history-beginning-search-backward
-#[[ -n "${key[Down]}"    ]] && bindkey  "${key[Down]}"    history-beginning-search-forward
-#autoload up-line-or-beginning-search
-#autoload down-line-or-beginning-search
-#zle -N up-line-or-beginning-search
-#zle -N down-line-or-beginning-search
-#[[ -n "${key[Up]}"      ]]  && bindkey   "${key[Up]}"       up-line-or-beginning-search
-#[[ -n "${key[Down]}"    ]]  && bindkey   "${key[Down]}"    down-line-or-beginning-search
-#
-#
-#[[ -n "${key[Home]}"    ]]  && bindkey  "${key[Home]}"    beginning-of-line
-#[[ -n "${key[End]}"     ]]  && bindkey  "${key[End]}"     end-of-line
-#[[ -n "${key[Insert]}"  ]]  && bindkey  "${key[Insert]}"  overwrite-mode
-#[[ -n "${key[Delete]}"  ]]  && bindkey  "${key[Delete]}"  delete-char
-#[[ -n "${key[Up]}"      ]]  && bindkey  "${key[Up]}"      up-line-or-history
-#[[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}"    down-line-or-history
-#[[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"    backward-char
-#[[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"   forward-char
-##
-#bindkey -M vicmd '?' history-incremental-search-backward
-#bindkey '^[[A' up-line-or-search
-#bindkey '^[[B' down-line-or-search
-#
-#
-#
-#function zle-line-init zle-keymap-select {
-#    zle reset-prompt
-#}
-#
-#zle -N zle-line-init
-#zle -N zle-keymap-select
-#
-#
 unsetopt correct_all  
 setopt correct
 export GOPATH=$HOME/go
@@ -303,3 +252,4 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 #source /usr/bin/virtualenvwrapper.sh
+source /home/kudi/1/gruvbox/gruvbox_256palette.sh

@@ -15,9 +15,9 @@ set $mod        Mod1
 set $ws1        
 set $ws2        
 set $ws3        
-set $ws4        
+set $ws6        
 set $ws5        
-set $ws6        
+set $ws4        
 set $ws7        
 set $ws8        
 set $ws9        
@@ -38,7 +38,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
-bindsym $mod+Return exec --no-startup-id xterm
+bindsym $mod+Return exec --no-startup-id st
 
 # kill focused window
 bindsym $mod+q kill
@@ -120,7 +120,7 @@ bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
-bindsym $mod+m workspace $ws8
+bindsym $mod+c workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
@@ -141,10 +141,10 @@ workspace_auto_back_and_forth yes
 bindsym $mod+z workspace back_and_forth
 bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
 
-#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
-bindsym Control+Shift+0x5b exec --no-startup-id amixer -q set Master 5%- unmute
-#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
-bindsym Control+Shift+0x5d exec --no-startup-id amixer -q set Master 5%+ unmute
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
+#bindsym Control+Shift+0x5b exec --no-startup-id amixer -q set Master 5%- unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
+#bindsym Control+Shift+0x5d exec --no-startup-id amixer -q set Master 5%+ unmute
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 
 bindsym Mod4+n bar mode toggle
@@ -160,16 +160,14 @@ bindsym Print             exec --no-startup-id xfce4-screenshooter
 bindsym $mod+F1           exec --no-startup-id gsimplecal
 bindsym Mod4+c            exec --no-startup-id galculator
 bindsym Mod4+d            exec --no-startup-id deadbeef 
-bindsym Mod4+f            exec --no-startup-id feh_browser.sh /home/dm/Изображения/1.\ Наши\ телефоны.png
 bindsym Mod4+p            exec --no-startup-id pgadmin3
-bindsym Mod4+s            exec --no-startup-id spacefm
+bindsym Mod4+s            exec --no-startup-id pcmanfm
 bindsym $mod+Control+c    exec --no-startup-id chromium
 bindsym $mod+Control+d    exec --no-startup-id doublecmd
 bindsym $mod+Control+f    exec --no-startup-id firefox
 bindsym $mod+Control+s    exec --no-startup-id skype
 bindsym $mod+Control+t    exec --no-startup-id thunderbird
-bindsym $mod+Control+v    exec --no-startup-id xterm -title  "VIFM ALONE" -e vifm
-bindsym $mod+Control+k    exec --no-startup-id kill `ps ax | awk '/vncviewer/ && !/grep/ {print $1}'`
+bindsym $mod+Control+v    exec --no-startup-id st -t "VIFM" -e vifm
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -239,17 +237,16 @@ for_window [class="Pgadmin3"]  layout tabbed, border none
 # Automatically putting clients on specific workspaces
 assign [class="Pcmanfm"]                → $ws2
 assign [class="Spacefm"]              → $ws2
-assign [class="XTerm" title="VIFM"]     → $ws2
+assign [class="st-256color" title="VIFM"]     → $ws2
 
-assign [class="Firefox"]                → $ws3
+assign [class="Firefox"]                → $ws4
 
-assign [class="Deadbeef"]               → $ws4
-assign [class="Skype"]                → $ws4
+assign [class="Deadbeef"]               → $ws5
+assign [class="Skype"]                → $ws5
 
 assign [class="Pgadmin3"]               → $ws5
 
-assign [class="Zathura"]                → $ws6
-assign [class="chromium"]               → $ws6
+assign [class="Chromium"]               → $ws3
 
 assign [class="VirtualBox"]             → $ws7
 assign [class="rdesktop"]               → $ws7
