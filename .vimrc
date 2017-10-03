@@ -33,9 +33,9 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 set background=dark
-colorscheme solarized8_dark
-"colorscheme gruvbox
-"let g:gruvbox_contrast_dark='medium'
+"colorscheme solarized8_dark
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='medium'
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 let g:ackprg = 'ag --nogroup --nocolor --column --smart-case --ignore-dir=node_modules --ignore-dir=lib --ignore-dir=dist'
 
