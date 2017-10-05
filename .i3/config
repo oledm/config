@@ -42,7 +42,6 @@ bindsym $mod+Return exec --no-startup-id st
 # kill focused window
 bindsym $mod+q kill
 
-# start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run  -fn  "PTSans-12:normal" -nb "#3c3836" -nf "#8ec07c" -sb "#d65d0e"
 #bindsym $mod+d exec dmenu_run -fn  "PTSans-12:normal" -nb "#002b36" -nf "#F0A659" -sb "#3B7C87"
 #bindsym $mod+d exec dmenu_run -sf "#3B7C87" -sb "#191311" -nb '#191311' -nf '#806157' -fn "ptsans-13" -i
@@ -102,9 +101,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 #exec_always --no-startup-id xrandr --output LVDS-0 --off --output HDMI-0 --primary --mode 1920x1080
-#exec_always --no-startup-id xrandr --output LVDS-1 --off --output HDMI-1 --primary --mode 1920x1080
 exec_always --no-startup-id xrandr --output eDP1 --off --output HDMI1 --primary --mode 1920x1080
-#exec_always --no-startup-id xrandr --output LVDS-0 --primary --mode 1366x768
 exec --no-startup-id setxkbmap "us,ru" ",winkeys" "grp:caps_toggle,grp_led:scroll"
 exec --no-startup-id xset r rate 250 30
 exec --no-startup-id xset b off
@@ -218,18 +215,13 @@ bindsym $mod+Pause mode "$mode_system"
 # Floating windows
 for_window [class="Galculator"]     floating enable
 for_window [class="Lxappearance"]   floating enable
-for_window [class="Vlc"]   floating enable
-for_window [title="Удаленное администрирование"]   floating enable, border 1pixel
 for_window [class="Gsimplecal"]   floating enable, border none
 for_window [class="feh"]   floating enable, border normal 0, move absolute position 0px 0px
 for_window [class="Vncviewer"]   floating enable, border 1pixel
 for_window [class="Doublecmd"] floating enable
 for_window [class="Animate"] floating enable
-for_window [title="Double Commander 0."] floating disable
 for_window [class="Soffice"] floating enable
-for_window [class="Zathura"]  layout tabbed, border normal
 for_window [class="Gsimplecal"]   border 1pixel
-for_window [class="rdesktop"]   floating disable
 for_window [class="Deadbeef"]   border none 
 for_window [class="VirtualBox"]  layout tabbed, border none
 for_window [class="Pgadmin3"]  layout tabbed, border none
@@ -260,15 +252,16 @@ assign [title="Karma – Chromium"]               → $ws9
 bar {
   position bottom
     font pango:PT Sans 11
+    separator_symbol "|"
     status_command $HOME/bin/conky-i3bar
     tray_output HDMI1
   colors {
     separator #928374
     background #282828
     statusline #8ec07c
-    focused_workspace #282828 #282828 #8ec07c
-    active_workspace #282828 #282828 #928374
-    inactive_workspace #282828 #282828 #928374
+    focused_workspace #282828 #282828 #fe8019
+    active_workspace #282828 #282828 #8ec07c
+    inactive_workspace #282828 #282828 #8ec07c
     urgent_workspace #282828 #282828 #b16286
   }
 }
