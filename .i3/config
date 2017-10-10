@@ -214,6 +214,7 @@ bindsym $mod+Pause mode "$mode_system"
 
 # Floating windows
 for_window [class="Galculator"]     floating enable
+for_window [class="Vlc"]     floating enable
 for_window [class="Lxappearance"]   floating enable
 for_window [class="Gsimplecal"]   floating enable, border none
 for_window [class="feh"]   floating enable, border normal 0, move absolute position 0px 0px
@@ -267,6 +268,6 @@ bar {
 }
 
 client.focused          #8ec07c #8ec07c #282828 #d65d0e
-client.focused_inactive #8ec07c #1d2021 #928374 #ebdbb2 #504945
+client.focused_inactive #1d2021 #1d2021 #928374 #ebdbb2 #504945
 client.unfocused        #8ec07c #504945 #928374 #ebdbb2
 client.urgent           #8ec07c #cc241d #b16286 #282828
