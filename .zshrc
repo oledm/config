@@ -126,6 +126,7 @@ bindkey -v
 export KEYTIMEOUT=1
 alias vim="nvim"
 alias vi="nvim"
+alias v="nvim"
 alias vimdiff='nvim -d'
 export EDITOR="nvim"
 export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
@@ -252,4 +253,4 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 #source /usr/bin/virtualenvwrapper.sh
-source /home/kudi/1/gruvbox/gruvbox_256palette.sh
+#source /home/kudi/1/gruvbox/gruvbox_256palette.sh
