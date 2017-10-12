@@ -132,18 +132,11 @@ set statusline="  %t%= %A %10u:%-7g %15s %20d  "
 set incsearch
 
 mark h ~/
-mark d ~/Data/Олейник/
+mark w ~/Work/Projects/
 mark D ~/Загрузки/
 mark i ~/Изображения/
-mark b ~/Data/Diff/Книги/
-mark m ~/Data/Diff/Музыка/
-mark o /mnt/obmen
-mark O /mnt/obmen/Олейник/
-mark r "/mnt/obmen/!!Отчеты по установленным системам"
-mark l /mnt/l51
-mark v /mnt/VM
-mark s /mnt/shared
-mark f ~/ftp/
+mark b ~/Work/Data/Diff/Книги/
+mark m ~/Work/Data/Diff/Музыка/
 
 command! df df -h %m 2> /dev/null
 command! diff vim -d %f %F
@@ -274,7 +267,7 @@ nnoremap cc cw<c-u>
 nnoremap A cw<c-w>
 
 " Open console in current directory
-nnoremap ,t :!xterm &<cr>
+nnoremap ,t :!st &<cr>
 
 " Open vim to edit vifmrc and apply settings after returning to vifm
 nnoremap ,c :write | execute ':!vim $MYVIFMRC' | restart<cr>
@@ -292,7 +285,7 @@ nnoremap <f6> :move<cr>
 nnoremap <S-f7> :mkdir<space> "<C-x>c"<left>
 nnoremap <f7> :mkdir<space> ""<left>
 nnoremap <f8> :delete<cr>
-nnoremap <f9> :!xterm &<cr>
+nnoremap <f9> :!st &<cr>
 nnoremap <f10> :set sort=-mtime<cr>
 nnoremap <f11> :set sort=mtime<cr>
 nnoremap <f12> :set sort=name<cr>
