@@ -27,7 +27,7 @@ DISABLE_AUTO_UPDATE="true"
 DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -244,7 +244,7 @@ unpack () {
 }
 
 unsetopt correct_all  
-setopt correct
+#setopt correct
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 # virtualenvwrapper script
@@ -254,3 +254,7 @@ export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 #source /usr/bin/virtualenvwrapper.sh
 #source /home/kudi/1/gruvbox/gruvbox_256palette.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
