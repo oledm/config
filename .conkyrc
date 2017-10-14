@@ -15,7 +15,7 @@ conky.text = [[
     [
 
     { "full_text" : "${if_running deadbeef-gtkui}${execi 3 deadbeef --nowplaying " %a - %t (%e/%l)" | sed 's/<//g'}${endif} ", "color" : "\#3B7C87"},
-    { "full_text" : " CPU $cpu% MEM ${memperc}% ${acpitemp}°C ${battery_percent}% " , "color" : "\#F0A659" },
+    { "full_text" : " CPU $cpu% MEM ${memperc}% ${acpitemp}°C " , "color" : "\#F0A659" },
     { "full_text" : " ${time %a %d/%b %R}"}
     ],
 ]]

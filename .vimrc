@@ -68,7 +68,7 @@ let g:rainbow_operators = 1
 
 let g:NERDTreeWinSize=40
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git\|jspm_packages\|bower_components\|lib'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git\|jspm_packages\|bower_components\|lib\|dist\|public'
 let g:ycm_server_python_interpreter='/usr/bin/python2.7'
 "let g:ctrlp_cmd = 'CtrlPBuffer'
 let delimitMate_expand_cr = 2
