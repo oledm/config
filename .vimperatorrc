@@ -34,8 +34,8 @@ nnoremap k 2k
 
 " Display
 "" show only the tab bar
-"set gui=tabs
-set gui=none
+set gui=tabs
+"set gui=none
 "" see http://code.google.com/p/vimperator-labs/issues/detail?id=311
 set popups=tab,resized
 

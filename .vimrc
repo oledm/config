@@ -27,6 +27,7 @@ Plugin 'vim-scripts/paredit.vim'
 Plugin 'luochen1990/rainbow'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'morhetz/gruvbox'
+Plugin 'alampros/vim-styled-jsx'
 
 call vundle#end()            " required
 
